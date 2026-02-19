@@ -9,8 +9,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-   background: linear-gradient(to right, #d677d6, #ffb6c1);
+    background: linear-gradient(to right, #d677d6, #ffb6c1);
     overflow-x: hidden;
+}
+
+/* Buscador */
+#buscador {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
 /* Animación pétalos */
@@ -26,15 +37,10 @@ body {
 }
 
 @keyframes caer {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Banner */
 .banner img {
     width: 60%;
     max-width: 600px;
@@ -44,17 +50,10 @@ body {
     display: block;
 }
 
-h2 {
-    color: #b30059;
-    font-size: 32px;
-}
+h2 { color: #b30059; }
+p { color: #800040; }
 
-p {
-    color: #800040;
-    font-size: 18px;
-}
-
-/* Sección Sobre Nosotros */
+/* Sobre nosotros */
 .sobre {
     background: white;
     margin: 40px auto;
@@ -81,9 +80,7 @@ p {
     transition: transform 0.3s ease;
 }
 
-.producto:hover {
-    transform: scale(1.05);
-}
+.producto:hover { transform: scale(1.05); }
 
 .producto img {
     width: 100%;
@@ -103,9 +100,7 @@ p {
     margin-top: 10px;
 }
 
-.btn:hover {
-    background: #1ebe5d;
-}
+.btn:hover { background: #1ebe5d; }
 
 /* WhatsApp flotante */
 .whatsapp-float {
@@ -120,17 +115,12 @@ p {
     font-weight: bold;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
-
-.whatsapp-float:hover {
-    background: #1ebe5d;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- PÉTALOS -->
+<!-- Pétalos -->
 <script>
 for(let i = 0; i < 20; i++){
     let petalo = document.createElement("div");
@@ -142,7 +132,6 @@ for(let i = 0; i < 20; i++){
 }
 </script>
 
-<!-- Banner -->
 <div class="banner">
     <img src="https://i.ibb.co/xSGyrFpH/roses.png" alt="Roses Cuenca">
 </div>
@@ -154,57 +143,55 @@ for(let i = 0; i < 20; i++){
 <div class="sobre">
     <h2>Sobre Nosotros</h2>
     <p>
-        En <strong>Roses Cuenca</strong> somos una empresa especializada en la comercialización 
-        de rosas de alta calidad tipo exportación. Nos caracterizamos por ofrecer únicamente 
-        rosas seleccionadas.
+        En <strong>Roses Cuenca</strong> somos especialistas en rosas tipo exportación,
+        calidad tipo B seleccionada. No trabajamos con rosa de rechazo.
+        Garantizamos frescura y elegancia en cada ramo.
     </p>
-    <p>
-        No trabajamos con rosa de rechazo. Nuestro compromiso es brindar 
-        calidad tipo B de exportación, posicionándonos como líderes en el mercado.
-    </p>
-    
 </div>
 
-<!-- CATÁLOGO -->
 <h2>Nuestro Catálogo</h2>
 
-<div class="catalogo">
+<!-- BUSCADOR -->
+<input type="text" id="buscador" placeholder="Buscar ramo..." onkeyup="filtrarProductos()">
+
+<div class="catalogo" id="catalogo">
 
 <div class="producto">
     <img src="https://i.ibb.co/KpQvh0V8/Captura-de-pantalla-2025-11-25-163943.png">
     <p>Ramo Elegante</p>
-    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+    <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20comprar%20el%20Ramo%20Elegante" target="_blank">Consultar</a>
 </div>
 
 <div class="producto">
     <img src="https://i.ibb.co/GvpNBfwk/Captura-de-pantalla-2025-11-25-163855.png">
     <p>Ramo Clásico</p>
-    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+    <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20comprar%20el%20Ramo%20Clásico" target="_blank">Consultar</a>
 </div>
 
 <div class="producto">
     <img src="https://i.ibb.co/NgSC76V0/Captura-de-pantalla-2025-11-25-163844.png">
     <p>Ramo Premium</p>
-    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
-</div>
-
-<div class="producto">
-    <img src="https://i.ibb.co/KzbHN057/Captura-de-pantalla-2025-11-25-163904.png">
-    <p>Ramo Deluxe</p>
-    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
-</div>
-
-<div class="producto">
-    <img src="https://i.ibb.co/Sw3V3n9t/Captura-de-pantalla-2025-11-25-163931.png">
-    <p>Ramo Especial</p>
-    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+    <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20comprar%20el%20Ramo%20Premium" target="_blank">Consultar</a>
 </div>
 
 </div>
 
-<a href="https://wa.me/593987292654" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20las%20rosas" 
+   class="whatsapp-float" target="_blank">
     WhatsApp
 </a>
+
+<script>
+function filtrarProductos() {
+    let input = document.getElementById("buscador").value.toLowerCase();
+    let productos = document.getElementsByClassName("producto");
+
+    for (let i = 0; i < productos.length; i++) {
+        let texto = productos[i].innerText.toLowerCase();
+        productos[i].style.display = texto.includes(input) ? "" : "none";
+    }
+}
+</script>
 
 </body>
 </html>
