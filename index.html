@@ -4,11 +4,11 @@
 <title>ROSES CUENCA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon directo desde la web -->
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="https://i.ibb.co/xSGyrFpH/roses.png?v=1">
 <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/xSGyrFpH/roses.png?v=1">
 
-<!-- Font Awesome para los iconos flotantes -->
+<!-- Font Awesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style>
@@ -16,7 +16,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #fff0f6; /* más rosadito pastel */
+    background-color: #fff0f6;
     overflow-x: hidden;
 }
 
@@ -106,7 +106,7 @@ p {
 
 .btn:hover { background: #1ebe5d; }
 
-/* Botones flotantes con iconos */
+/* Botones flotantes */
 .float {
     position: fixed;
     width: 60px;
@@ -127,23 +127,24 @@ p {
 
 .float:hover { transform: scale(1.1); }
 
-/* WhatsApp */
-.whatsapp { 
-    background-color: #25D366; 
-    right: 20px; 
-}
+.whatsapp { background-color: #25D366; right: 20px; }
+.maps { background-color: #4285F4; right: 90px; }
 
-/* Google Maps */
-.maps { 
-    background-color: #4285F4; 
-    right: 90px; 
+/* Buscador */
+#buscar {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 </style>
 </head>
 
 <body>
 
-<!-- PÉTALOS -->
+<!-- Pétalos animados -->
 <script>
 for(let i = 0; i < 20; i++){
     let petalo = document.createElement("div");
@@ -163,7 +164,7 @@ for(let i = 0; i < 20; i++){
 <h2>Bienvenidos a Roses Cuenca 🌹</h2>
 <p>Tenemos modelos exclusivos para toda ocasión</p>
 
-<!-- SOBRE NOSOTROS -->
+<!-- Sobre Nosotros -->
 <div class="sobre">
     <h2>Sobre Nosotros</h2>
     <p>
@@ -177,14 +178,11 @@ for(let i = 0; i < 20; i++){
     </p>
 </div>
 
-    <!-- Búsqueda Catalogo -->
-    
-<input type="text" id="buscar" placeholder="Buscar bouquet..." onkeyup="buscarBouquet()" style="padding:10px; width:80%; max-width:400px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;">
+<!-- Buscador -->
+<input type="text" id="buscar" placeholder="Buscar bouquet..." onkeyup="buscarBouquet()">
 
-
-<!-- CATÁLOGO -->
+<!-- Catálogo -->
 <h2>Nuestro Catálogo</h2>
-
 <div class="catalogo">
     <!-- Productos -->
     <div class="producto">
@@ -237,40 +235,34 @@ for(let i = 0; i < 20; i++){
         <p>Bouquet de Lujo</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20de%20Lujo%F0%9F%8C%B9" target="_blank">Consultar</a>
     </div>
-<div class="producto">
+    <div class="producto">
         <img src="https://i.ibb.co/v6Zqbqyz/Imagen-de-Whats-App-2025-12-05-a-las-12-02-40-21b11710.jpg">
         <p>Bouquet Rayo de Sol</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20Rayo%20de%20Sol%F0%9F%8C%BB" target="_blank">Consultar</a>
     </div>
-
     <div class="producto">
         <img src="https://i.ibb.co/fzPKhD7q/rosass-s.jpg">
         <p>Bouquet Dulce Tentación</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20Dulce%20Tentación%F0%9F%8D%AB%E2%9C%A8" target="_blank">Consultar</a>
     </div>
-
     <div class="producto">
         <img src="https://i.ibb.co/DPZBQDVN/ROSES1.jpg">
         <p>Bouquet Mujer</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20Mujer%F0%9F%8C%B8" target="_blank">Consultar</a>
     </div>
-
     <div class="producto">
         <img src="https://i.ibb.co/nsgHwx14/ROSES-4.jpg">
         <p>Bouquet Mix</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20Mix%E2%9C%A8%F0%9F%8C%B7" target="_blank">Consultar</a>
     </div>
-
-
     <div class="producto">
         <img src="https://i.ibb.co/kgf0wWJY/ROSES.jpg">
         <p>Bouquet Lirio</p>
         <a class="btn" href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20el%20Bouquet%20Lirio%F0%9F%AA%B7" target="_blank">Consultar</a>
     </div>
-    
 </div>
 
-<!-- BOTONES FLOTANTES -->
+<!-- Botones flotantes -->
 <a href="https://wa.me/593987292654" class="float whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
@@ -278,12 +270,21 @@ for(let i = 0; i < 20; i++){
     <i class="fas fa-map-marker-alt"></i>
 </a>
 
+<!-- Script de búsqueda -->
+<script>
+function buscarBouquet() {
+    let filtro = document.getElementById('buscar').value.toLowerCase();
+    let productos = document.getElementsByClassName('producto');
+    for (let i = 0; i < productos.length; i++) {
+        let nombre = productos[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+        if (nombre.indexOf(filtro) > -1) {
+            productos[i].style.display = '';
+        } else {
+            productos[i].style.display = 'none';
+        }
+    }
+}
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
