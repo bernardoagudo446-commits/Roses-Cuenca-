@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>ROSES CUENCA</title>
+<meta charset="UTF-8">
+<title>Roses Cuenca | Rosas Tipo Exportación</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -9,7 +10,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
- background-color: #fff0f6;    
+    background-color: #fff0f6;
     overflow-x: hidden;
 }
 
@@ -41,6 +42,7 @@ body {
     100% { transform: translateY(100vh) rotate(360deg); }
 }
 
+/* Banner */
 .banner img {
     width: 60%;
     max-width: 600px;
@@ -80,7 +82,9 @@ p { color: #800040; }
     transition: transform 0.3s ease;
 }
 
-.producto:hover { transform: scale(1.05); }
+.producto:hover {
+    transform: scale(1.05);
+}
 
 .producto img {
     width: 100%;
@@ -100,7 +104,9 @@ p { color: #800040; }
     margin-top: 10px;
 }
 
-.btn:hover { background: #1ebe5d; }
+.btn:hover {
+    background: #1ebe5d;
+}
 
 /* WhatsApp flotante */
 .whatsapp-float {
@@ -120,7 +126,7 @@ p { color: #800040; }
 
 <body>
 
-<!-- Pétalos -->
+<!-- Pétalos animados -->
 <script>
 for(let i = 0; i < 20; i++){
     let petalo = document.createElement("div");
@@ -132,6 +138,7 @@ for(let i = 0; i < 20; i++){
 }
 </script>
 
+<!-- Banner -->
 <div class="banner">
     <img src="https://i.ibb.co/xSGyrFpH/roses.png" alt="Roses Cuenca">
 </div>
@@ -139,21 +146,22 @@ for(let i = 0; i < 20; i++){
 <h2>Bienvenidos a Roses Cuenca 🌹</h2>
 <p>Tenemos modelos exclusivos para toda ocasión</p>
 
-<!-- SOBRE NOSOTROS -->
+<!-- Sobre Nosotros -->
 <div class="sobre">
     <h2>Sobre Nosotros</h2>
     <p>
         En <strong>Roses Cuenca</strong> somos especialistas en rosas tipo exportación,
         calidad tipo B seleccionada. No trabajamos con rosa de rechazo.
-        Garantizamos frescura y elegancia en cada ramo.
+        Garantizamos frescura, elegancia y excelencia en cada ramo.
     </p>
 </div>
 
 <h2>Nuestro Catálogo</h2>
 
-<!-- BUSCADOR -->
+<!-- Buscador -->
 <input type="text" id="buscador" placeholder="Buscar ramo..." onkeyup="filtrarProductos()">
 
+<!-- Catálogo -->
 <div class="catalogo" id="catalogo">
 
 <div class="producto">
@@ -188,9 +196,10 @@ for(let i = 0; i < 20; i++){
 
 </div>
 
+<!-- Botón flotante -->
 <a href="https://wa.me/593987292654?text=Hola%20quisiera%20información%20sobre%20las%20rosas" 
    class="whatsapp-float" target="_blank">
-    WhatsApp
+   WhatsApp
 </a>
 
 <script>
@@ -207,5 +216,3 @@ function filtrarProductos() {
 
 </body>
 </html>
-
-
