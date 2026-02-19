@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ROSES CUENCA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+   background: linear-gradient(to right, #d677d6, #ffb6c1);
+    overflow-x: hidden;
+}
+
+/* Animación pétalos */
+.petalo {
+    position: fixed;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background: pink;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.7;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Banner */
+.banner img {
+    width: 60%;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+    display: block;
+}
+
+h2 {
+    color: #b30059;
+    font-size: 32px;
+}
+
+p {
+    color: #800040;
+    font-size: 18px;
+}
+
+/* Sección Sobre Nosotros */
+.sobre {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #1ebe5d;
+}
+
+/* WhatsApp flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PÉTALOS -->
+<script>
+for(let i = 0; i < 20; i++){
+    let petalo = document.createElement("div");
+    petalo.classList.add("petalo");
+    petalo.style.left = Math.random() * 100 + "vw";
+    petalo.style.animationDuration = (5 + Math.random() * 5) + "s";
+    petalo.style.opacity = Math.random();
+    document.body.appendChild(petalo);
+}
+</script>
+
+<!-- Banner -->
+<div class="banner">
+    <img src="https://i.ibb.co/xSGyrFpH/roses.png" alt="Roses Cuenca">
+</div>
+
+<h2>Bienvenidos a Roses Cuenca 🌹</h2>
+<p>Tenemos modelos exclusivos para toda ocasión</p>
+
+<!-- SOBRE NOSOTROS -->
+<div class="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+        En <strong>Roses Cuenca</strong> somos una empresa especializada en la comercialización 
+        de rosas de alta calidad tipo exportación. Nos caracterizamos por ofrecer únicamente 
+        rosas seleccionadas.
+    </p>
+    <p>
+        No trabajamos con rosa de rechazo. Nuestro compromiso es brindar 
+        calidad tipo B de exportación, posicionándonos como líderes en el mercado.
+    </p>
+    
+</div>
+
+<!-- CATÁLOGO -->
+<h2>Nuestro Catálogo</h2>
+
+<div class="catalogo">
+
+<div class="producto">
+    <img src="https://i.ibb.co/KpQvh0V8/Captura-de-pantalla-2025-11-25-163943.png">
+    <p>Ramo Elegante</p>
+    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+</div>
+
+<div class="producto">
+    <img src="https://i.ibb.co/GvpNBfwk/Captura-de-pantalla-2025-11-25-163855.png">
+    <p>Ramo Clásico</p>
+    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+</div>
+
+<div class="producto">
+    <img src="https://i.ibb.co/NgSC76V0/Captura-de-pantalla-2025-11-25-163844.png">
+    <p>Ramo Premium</p>
+    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+</div>
+
+<div class="producto">
+    <img src="https://i.ibb.co/KzbHN057/Captura-de-pantalla-2025-11-25-163904.png">
+    <p>Ramo Deluxe</p>
+    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+</div>
+
+<div class="producto">
+    <img src="https://i.ibb.co/Sw3V3n9t/Captura-de-pantalla-2025-11-25-163931.png">
+    <p>Ramo Especial</p>
+    <a class="btn" href="https://wa.me/593987292654" target="_blank">Consultar</a>
+</div>
+
+</div>
+
+<a href="https://wa.me/593987292654" class="whatsapp-float" target="_blank">
+    WhatsApp
+</a>
+
+</body>
+</html>
